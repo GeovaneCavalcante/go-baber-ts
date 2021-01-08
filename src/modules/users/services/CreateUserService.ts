@@ -17,9 +17,7 @@ class CreateUserService {
   constructor(
     @inject('usersRepository')
     private usersRepository: IUsersRespository,
-  ) {
-    console.log('starting');
-  }
+  ) {}
 
   public async execute({ name, email, password }: IRequest): Promise<User> {
     const checkUserExists = await this.usersRepository.findByEmail(email);

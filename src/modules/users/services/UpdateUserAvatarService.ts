@@ -18,9 +18,7 @@ class UpdateUserAvatarService {
   constructor(
     @inject('usersRepository')
     private usersRepository: IUsersRespository,
-  ) {
-    console.log('starting');
-  }
+  ) {}
 
   public async execute({ user_id, avatarFilename }: IRequest): Promise<User> {
     const user = await this.usersRepository.findById(user_id);

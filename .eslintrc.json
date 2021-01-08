@@ -16,10 +16,7 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "camelcase": [
-      "error",
-      { "allow": ["updated_at", "created_at", "provider_id", "user_id"] }
-    ],
+    "camelcase": ["error", { "never": [] }],
     "@typescript-eslint/naming-convention": [
       "error",
       {
